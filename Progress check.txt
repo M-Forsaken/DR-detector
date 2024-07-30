@@ -1,0 +1,44 @@
+Baseline: 
+0.46 (with EfficientNet model b3)
+0.4604 (with EfficientNet model b4)
+=> no improvement
+
+preprocess images:
+0.50 (130x130 with 150x150 images file) + 0.04 difference
+
+Improve lost function: using MeanSquaredError
+0.54 + 0.04 difference
+0.50(public score)
+0.49(private score)
+
+Increase training data using val data:
+0.56 + 0.02 difference
+
+retrain from start:
+0.56 no difference
+
+0.58 + 0.04 (150x150 with 1000x1000 images file)
+0.55(public score)
+0.53(private score)
+
+Blend left and right eyes data:
+train blend
+    0.67 + 0.9 difference (model overfit)
+    0.62279(public score)
+    0.60183(private score)
+
+Use validation data to train:
+train blend:
+    0.6142(public score)
+    0.5997(private score)
+
+Increase images resolution and Heavy data augmentation:
+300x300
+train:
+    0.7074(public score)
+    0.6971(private score)
+
+
+
+
+
